@@ -2,10 +2,12 @@ import LoginImage from "../../assets/login/login_image.svg?react";
 import LogoImage from "../../assets/login/lendsqr_logo.svg?react";
 import "../../styles/login-desktop.scss";
 import { useState } from "react";
+import { useLogin } from "../../hooks/useLogin";
 
 export default function LoginDesktop() {
 
   const [showPassword, setShowPassword] = useState(false);
+  const { handleLogin, isLoading } = useLogin();
 
   return (
     <div className="login-desktop">
@@ -28,7 +30,7 @@ export default function LoginDesktop() {
             Enter details to login.
           </p>
 
-          <form className="login-form__fields">
+          <form className="login-form__fields" onSubmit={handleLogin}>
             <input type="email" placeholder="Email" />
 
             <div className="password-field">
@@ -49,8 +51,8 @@ export default function LoginDesktop() {
               FORGOT PASSWORD?
             </p>
 
-            <button type="submit">
-              LOG IN
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? "LOGGING IN..." : "LOG IN"}
             </button>
           </form>
         </div>

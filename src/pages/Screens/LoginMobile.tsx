@@ -2,9 +2,11 @@ import { useState } from "react";
 import LoginImage from "../../assets/login/login_image.svg?react";
 import LogoImage from "../../assets/login/lendsqr_logo.svg?react";
 import "../../styles/login-mobile.scss";
+import { useLogin } from "../../hooks/useLogin";
 
 export default function LoginMobile() {
   const [showPassword, setShowPassword] = useState(false);
+  const { handleLogin, isLoading } = useLogin();
 
   return (
     <div className="login-mobile">
@@ -20,7 +22,7 @@ export default function LoginMobile() {
         <h1>Welcome!</h1>
         <p>Enter details to login.</p>
 
-        <form>
+        <form onSubmit={handleLogin}>
           <input type="email" placeholder="Email" />
 
           <div className="password-field">
@@ -38,7 +40,9 @@ export default function LoginMobile() {
 
           <span className="forgot">FORGOT PASSWORD?</span>
 
-          <button type="submit">LOG IN</button>
+          <button type="submit" disabled={isLoading}>
+              {isLoading ? "LOGGING IN..." : "LOG IN"}
+          </button>
         </form>
       </div>
     </div>
