@@ -1,0 +1,104 @@
+@use "./variables" as *;
+
+.login-mobile {
+  min-height: 100vh;
+  background-color: $white;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-mobile__header {
+  margin-bottom: 32px;
+
+  svg {
+    height: 28px;
+  }
+}
+
+.login-mobile__image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  svg {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+}
+
+.login-mobile__form {
+  h1 {
+    font-size: 28px;
+    font-weight: $font-weight-bold;
+    color: $primary-blue;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: $primary-gray;
+    margin-bottom: 32px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  input {
+    padding: 14px 16px; 
+    border-radius: $radius-login-input;
+    border: 1px solid rgba(84, 95, 125, 0.15);
+    font-family: $font-primary;
+    font-size: $font-size-base;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-teal;
+    }
+  }
+
+  button {
+    margin-top: 8px;
+    padding: 14px;
+    background-color: $primary-teal;
+    color: $white;
+    border: none;
+    border-radius: $radius-login-input;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding-right: 60px;
+  }
+
+  &__toggle {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $primary-teal;
+    cursor: pointer;
+    background: white;
+    z-index: 2;
+  }
+}
+
+.forgot {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  color: $primary-teal;
+  cursor: pointer;
+}
