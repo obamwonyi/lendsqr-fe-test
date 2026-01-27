@@ -6,3 +6,37 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
+
+// Font Sizes
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 22px;
+$font-size-2xl: 24px;
+$font-size-3xl: 40px;
+
+
+// Colors
+$primary-blue: #213F7D;  
+$primary-teal: #39CDCC;        
+$primary-gray: #545F7D;         
+
+$white: #FFFFFF;            
+$yellow: #E9B200;             
+$red: #E4033B;             
+$green: #39CD62;    
+
+// The general shadow from UI (All the elevated components had the same shadow)
+$box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+// radius
+$radius-sm: 4px;
+$radius-login-input: 5px;
+$radius-md: 8px;
+$radius-pill: 100px;
+
+
+
+
+
