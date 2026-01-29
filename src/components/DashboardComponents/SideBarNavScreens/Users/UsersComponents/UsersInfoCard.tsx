@@ -4,16 +4,21 @@ interface UserInfoCardProps {
   icon: React.ReactNode;
   title: string;
   value: string | number;
+  iconBgColor: string;
 }
 
 export default function UserInfoCard({
   icon,
   title,
   value,
+  iconBgColor,
 }: UserInfoCardProps) {
   return (
     <div className="user-info-card">
-      <div className="user-info-card__icon">
+      <div 
+        className="user-info-card__icon"
+        style={{ background: iconBgColor }}
+      >
         {icon}
       </div>
 

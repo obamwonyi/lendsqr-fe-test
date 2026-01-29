@@ -14,12 +14,12 @@ export default function Users() {
   const [selectedUser, setSelectedUser] = useState<UserDetails | null>(null);
   const { users, getUserDetails } = useUsersData();
 
-  const stats = [
-    { title: "USERS", value: "2,453", icon: <UsersIcon /> },
-    { title: "ACTIVE USERS", value: "2,453", icon: <ActiveUsersIcon /> },
-    { title: "USERS WITH LOANS", value: "12,453", icon: <UsersWithLoans /> },
-    { title: "USERS WITH SAVINGS", value: "102,453", icon: <UsersWithSavings /> },
-  ];
+const stats = [
+  { title: "USERS", value: "2,453", icon: <UsersIcon />, iconBgColor: "rgba(223, 24, 255, 0.1)" },
+  { title: "ACTIVE USERS", value: "2,453", icon: <ActiveUsersIcon />, iconBgColor: "rgba(87, 24, 255, 0.1)" },
+  { title: "USERS WITH LOANS", value: "12,453", icon: <UsersWithLoans />, iconBgColor: "rgba(245, 95, 68, 0.1)" },
+  { title: "USERS WITH SAVINGS", value: "102,453", icon: <UsersWithSavings />, iconBgColor: "rgba(255, 51, 102, 0.1)" },
+];
 
   const handleUserClick = (userId: string) => {
     const userDetails = getUserDetails(userId);
