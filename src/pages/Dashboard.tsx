@@ -3,7 +3,6 @@ import { BREAKPOINTS } from '../constants/breakpoints';
 import DashboardDesktop from './Screens/DashboardDesktop';
 import DashboardMobile from './Screens/DashboardMobile';
 
-
 export default function Dashboard() 
 {
     const isMobile = useMediaQuery(BREAKPOINTS.mobile);

@@ -1,0 +1,31 @@
+.table-item-actions {
+  position: absolute;
+  width: 180px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  z-index: 1000;
+
+  button {
+    width: 100%;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #545f7d;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover {
+      background-color: #f5f7fa;
+    }
+  }
+}
