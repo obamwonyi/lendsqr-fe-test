@@ -20,138 +20,136 @@ import PreferenceIcon from "../../assets/sidebar/preferences.svg?react";
 import FeesAndPricingIcon from "../../assets/sidebar/fees_and_pricing.svg?react";
 import AuditLogsIcon from "../../assets/sidebar/audit_logs.svg?react";
 
+interface Props {
+  onNavigate?: () => void;
+}
 
+export default function DashboardSidebar({ onNavigate }: Props) {
+  const handleNavClick = () => {
+    if (onNavigate) {
+      onNavigate();
+    }
+  };
 
-export default function DashboardSidebar() {
   return (
     <aside className="dashboard-sidebar">
-      <div className="dashboard-sidebar__org">
+      <div className="dashboard-sidebar__org" onClick={handleNavClick}>
         <SwitchOrgIcon />
         <span>Switch Organization</span>
         <ArrowIcon />
       </div>
 
       <nav className="dashboard-sidebar__nav">
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <DashboardIcon />
           Dashboard
         </a>
 
         <p className="nav-section">CUSTOMERS</p>
 
-        <a className="nav-item active">
+        <a className="nav-item active" onClick={handleNavClick}>
           <UsersIcon />
           Users
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <GuarantorsIcon />
           Guarantors
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <LoansIcon />
           Loans
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <DecisionIcon />
           Decision Request
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <SavingsIcon />
           Savings
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <LoanRequestIcon />
           Loan Requests
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <WhiteListIcon />
           Whitelist
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <Karma />
           Karma
         </a>
 
         <p className="nav-section">BUSINESSES</p>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <SwitchOrgIcon />
           Organization
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <LoanRequestIcon />
           Load Products
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <SavingsProductsIcon />
           Savings Products
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <FeesChargesIcon />
           Fees and Charges
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <TransactionsIcon />
           Transactions
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <ServicesIcon />
           Services
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <ServicesAccountIcon />
           Service Account
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <SettlementsIcon />
           Settlements
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <ReportIcon />
           Reports
         </a>
 
         <p className="nav-section">SETTINGS</p>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <PreferenceIcon />
           Preference
         </a>
 
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <FeesAndPricingIcon />
           Fees and Pricing
         </a>
 
-
-        <a className="nav-item">
+        <a className="nav-item" onClick={handleNavClick}>
           <AuditLogsIcon />
           Audit Logs
         </a>
-
-
       </nav>
     </aside>
   );

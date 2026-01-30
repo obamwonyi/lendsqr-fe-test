@@ -139,12 +139,12 @@ export default function UsersListTableCard({ users, onUserClick }: Props) {
                 className="clickable-row"
                 onClick={() => onUserClick(user.id)}
               >
-                <td>{user.organization}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>{user.phone}</td>
-                <td>{user.dateJoined}</td>
-                <td>
+                <td data-label="Organization">{user.organization}</td>
+                <td data-label="Username">{user.username}</td>
+                <td data-label="Email">{user.email}</td>
+                <td data-label="Phone Number">{user.phone}</td>
+                <td data-label="Date Joined">{user.dateJoined}</td>
+                <td data-label="Status">
                   <span className={`status-badge status-badge--${user.status.toLowerCase()}`}>
                     {user.status}
                   </span>
